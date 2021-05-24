@@ -28,9 +28,9 @@ export class ApiService {
     });
   }
 
-  getUSDtoEURPrice(currency: string): Observable<number> {
+  getUSDtoEURPrice(): Observable<number> {
     return defer(() => {
-      console.log(`Sending request for ${currency}..`);
+      console.log(`Sending request for USD-EUR price..`);
 
       return of(this.#usd_eur).pipe(delay(Math.random() * 2000 + 500));
     });
